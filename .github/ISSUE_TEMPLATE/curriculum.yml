@@ -1,0 +1,26 @@
+name: Curriculum correction
+description: Report an incorrect move, explanation, notation, variation, or quiz answer.
+title: "[Curriculum] "
+labels: [curriculum]
+body:
+  - type: input
+    id: opening
+    attributes:
+      label: Opening and line
+      placeholder: Italian Game — Giuoco Piano
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: Current content
+      description: Identify the move, explanation, or question precisely.
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: Suggested correction and source
+      description: Explain the correction and link a reliable chess reference when possible.
+    validations:
+      required: true

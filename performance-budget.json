@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "maxTotalBytes": 550000,
+  "maxGzipBytes": 140000,
+  "maxJavaScriptBytes": 380000,
+  "maxCssBytes": 100000,
+  "maxSingleAssetBytes": 100000,
+  "maxDeployFiles": 30,
+  "maxPrecachedAssets": 24
+}

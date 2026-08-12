@@ -1,0 +1,26 @@
+name: Focused improvement
+description: Propose a small improvement consistent with OpeningLab's local-first design.
+title: "[Idea] "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Study problem
+      description: What is difficult today, and for whom?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Smallest useful change
+      description: Explain how the idea remains private, offline-capable, and maintainable.
+    validations:
+      required: true
+  - type: checkboxes
+    id: constraints
+    attributes:
+      label: Project constraints
+      options:
+        - label: This does not require an account, backend, analytics, or remote user-data storage.
+          required: true

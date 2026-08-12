@@ -1,0 +1,35 @@
+{
+  "name": "openinglab",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A free, private, offline-capable chess opening trainer.",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check:performance": "node scripts/check-performance.mjs",
+    "check:syntax": "node scripts/check-syntax.mjs",
+    "check:static": "node scripts/static-checks.mjs",
+    "check:version": "node scripts/check-version.mjs",
+    "curriculum:baseline": "node scripts/curriculum-report.mjs --write",
+    "curriculum:report": "node scripts/curriculum-report.mjs",
+    "lint": "eslint . --max-warnings=0",
+    "quality": "npm run check:syntax && npm run lint && npm run check:version && npm run validate:curriculum && npm run curriculum:report && npm run test:unit && npm run check:static && npm run sw:check",
+    "sw:generate": "node scripts/generate-service-worker.mjs",
+    "sw:check": "node scripts/generate-service-worker.mjs --check",
+    "test:browser": "npm run build && playwright test",
+    "test:e2e": "npm run build && playwright test tests/e2e/flows.spec.js tests/e2e/pwa.spec.js",
+    "test:a11y": "npm run build && playwright test tests/e2e/accessibility.spec.js",
+    "test:unit": "node --test tests/unit/*.test.mjs",
+    "validate": "npm run quality && npm run build && npm run check:performance && playwright test",
+    "validate:curriculum": "node scripts/validate-curriculum.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.39.4",
+    "@axe-core/playwright": "4.13.0",
+    "@playwright/test": "1.62.1",
+    "eslint": "9.39.4"
+  }
+}

@@ -1,0 +1,9 @@
+.DS_Store
+Thumbs.db
+dist/
+node_modules/
+test-results/
+playwright-report/
+.idea/
+.vscode/
+*.zip
